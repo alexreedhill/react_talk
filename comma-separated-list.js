@@ -72,7 +72,7 @@ export var RecommendationReason = React.createClass({
 
     nodeId() {
       return `recommendation-reason-${this.props.id}`
-    }
+    },
 
     displayTooltip() {
       this.props.openTooltip(
@@ -101,7 +101,7 @@ export var RecommendationReasons = React.createClass({
       return <CommaSeparatedList items={ this.props.reasons }
                                  listClassName="recommendation-reasons"
                                  itemClassName="recommendation-reason">
-               <RecommendationReason />
+               <RecommendationReason openTooltip={ this.props.openTooltip }/>
             </CommaSeparatedList>
     }
 });
